@@ -1,7 +1,5 @@
-let novoTexto = '';
-let textoOriginal = '';
-
 function criptografar() {
+    let novoTexto = '';
     let texto = document.querySelector('textarea').value;
 
     for (let i = 0; i < texto.length; i++) {
@@ -51,6 +49,7 @@ function exibirResultado(resultado) {
 
 
 function descriptografar() {
+    let textoOriginal = '';
     let novoTexto = document.querySelector('textarea').value;
 
     let i = 0;
