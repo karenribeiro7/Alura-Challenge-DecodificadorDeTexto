@@ -2,6 +2,13 @@ function criptografar() {
     let novoTexto = '';
     let texto = document.querySelector('textarea').value;
 
+    if (/[A-ZÁÉÍÓÚÀÈÌÒÙÂÊÎÔÛÃÕÄËÏÖÜÇáéíóúàèìòùâêîôûãõäëïöüç]/.test(texto)) {
+        alert('O texto não pode conter letras maiúsculas ou acentuadas.');
+
+        limparTexto();
+        return; // Interrompe a execução da função
+    }
+
     for (let i = 0; i < texto.length; i++) {
         let letra = texto[i];
         let codigo = '';
